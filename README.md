@@ -1,2 +1,2 @@
-# java-tests
-All Java related code snippetd
+# Java_Code
+All Java related code snippets
