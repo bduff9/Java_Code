@@ -1,5 +1,7 @@
 package com.mrc.Test;
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * Used for generic testing
  * @author Duffey
@@ -7,13 +9,16 @@ package com.mrc.Test;
 public class Test {
 
 	public static void main(String[] args) {
-		String str = "Hello";
+		String	url = "MRCISSUES.I00010s?slnk=1&CUSNO=${CUSNO}&test=${CUSNO}",
+				fld = "CUSNO",
+				replace = "${" + fld + "}",
+				value = "12345";
 		
-		System.out.println(str);
+		System.out.println(url);
 		
-		doSomething(str);
+		url = StringUtils.replace(url, replace, value);
 		
-		System.out.println(str);
+		System.out.println(url);
 	}
 	
 	public static void doSomething(String s) {
