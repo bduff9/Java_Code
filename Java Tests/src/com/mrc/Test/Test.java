@@ -7,15 +7,9 @@ package com.mrc.Test;
 public class Test {
 
 	public static void main(String[] args) {
-		int	x = -1,
-			y = x;
+		String	largeNumStr = "000000006100020800";
+		long	largeNum = Long.valueOf(largeNumStr, 10);
 		
-		System.out.println(x);
-		System.out.println(y);
-		
-		x = 33;
-		
-		System.out.println(x);
-		System.out.println(y);
+		System.out.println(largeNum);
 	}
 }
