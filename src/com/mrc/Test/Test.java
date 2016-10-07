@@ -1,5 +1,7 @@
 package com.mrc.Test;
 
+import java.math.BigDecimal;
+
 /**
  * Used for generic testing
  * @author Duffey
@@ -7,8 +9,8 @@ package com.mrc.Test;
 public class Test {
 
 	public static void main(String[] args) {
-		String	largeNumStr = "000000006100020800";
-		long	largeNum = Long.valueOf(largeNumStr, 10);
+		String	largeNumStr = "2500.00";
+		BigDecimal	largeNum = new BigDecimal(largeNumStr);
 		
 		System.out.println(largeNum);
 	}
