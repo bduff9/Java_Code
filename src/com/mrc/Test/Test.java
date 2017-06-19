@@ -1,6 +1,7 @@
 package com.mrc.Test;
 
-import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Used for generic testing
@@ -9,9 +10,11 @@ import java.math.BigDecimal;
 public class Test {
 
 	public static void main(String[] args) {
-		String	largeNumStr = "2500.00";
-		BigDecimal	largeNum = new BigDecimal(largeNumStr);
+		String	charStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ,!\"&#$%'()+/:;<=>?@[]^`{|}~\\";
+		Set<Character>	chars = new HashSet<>();
+
+		for (char c: charStr.toCharArray()) chars.add(c);
 		
-		System.out.println(largeNum);
+		System.out.println(chars.toString());
 	}
 }
